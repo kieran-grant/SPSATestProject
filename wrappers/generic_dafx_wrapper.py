@@ -126,7 +126,9 @@ class GenericDAFXWrapper(DAFXWrapperBase):
         self._set_attribute(name, value)
 
     def _set_attribute(self, name, value):
+        print(f"Setting parameter: {name} with value: {value:.4f}")
         setattr(self.dafx, name, value)
+        print("Parameter successfully set!")
 
     def apply_unnormalised_parameter_vector(self, vector):
         """

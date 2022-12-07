@@ -102,6 +102,10 @@ class SPSABatch(torch.autograd.Function):
         x, y = ctx.saved_tensors
 
         def _grad(dye, xe, ye):
+            print("-"*30)
+            print("BACKWARDS!")
+            print("-"*30)
+
             # Grad w.r.t x
             delta_Kx = rademacher(xe.shape)
 
